@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EditorForStudentsList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="EditorForStudentsList" Height="450" Width="800">
     <Grid>
-        
+        <ListView x:Name="ListOfStudents">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}">Фамилия</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=FirstName}">Имя</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
