@@ -7,11 +7,15 @@
         mc:Ignorable="d"
         Title="EditorForStudentsList" Height="450" Width="800">
     <Grid>
-        <ListView x:Name="ListOfStudents">
+        <ListView x:Name="ListOfStudents" d:DataContext="{d:SampleData Student |(in DataModel)}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}">Фамилия</GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=FirstName}">Имя</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOfBirth}">Дата рождения</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Email}">Email</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=IsStudy}">Учится?</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Faculty}">Факультет</GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
