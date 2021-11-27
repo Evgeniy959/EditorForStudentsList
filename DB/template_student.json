@@ -1,0 +1,9 @@
+﻿{
+  "FirstName": "Andrey",
+  "LastName": "Starinin",
+  "DateOfBirth": "1986.02.18",
+  "Phones": ["+79042144491", "257-57-55"],
+  "Email": "starininandrey@gmail.com",
+  "IsStudy": true,
+  "Faculty": "SoftDev"
+}
