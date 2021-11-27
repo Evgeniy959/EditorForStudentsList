@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorForStudentsList", "Ed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{D2060F38-F908-49E6-94BF-536989AF5C79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase.Lib", "DataBase.Lib\DataBase.Lib.csproj", "{9C1A6910-F963-4D41-9815-32E42B89097E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D2060F38-F908-49E6-94BF-536989AF5C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2060F38-F908-49E6-94BF-536989AF5C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2060F38-F908-49E6-94BF-536989AF5C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1A6910-F963-4D41-9815-32E42B89097E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1A6910-F963-4D41-9815-32E42B89097E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1A6910-F963-4D41-9815-32E42B89097E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1A6910-F963-4D41-9815-32E42B89097E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
