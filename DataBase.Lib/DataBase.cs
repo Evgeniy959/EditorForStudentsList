@@ -23,5 +23,15 @@ namespace DataBase.Lib
             
             return new StudentsList(students);
         }
+
+        public void AddStudent(Student student)
+        {
+            //TODO Реализовать метод
+        }
+
+        public void UpdateStudent(Student student)
+        {
+            //TODO Реализовать метод
+        }
     }
 }
