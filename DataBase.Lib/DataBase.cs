@@ -38,7 +38,7 @@ namespace DataBase.Lib
         public void UpdateStudent(Student student)
         {
             DbConnection();
-            //_collection.ReplaceOne(student, student);
+            _collection.ReplaceOne(Builders<Student>.Filter.Eq("Id", student.Id), student);
         }
     }
 }
