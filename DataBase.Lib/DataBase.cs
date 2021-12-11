@@ -1,5 +1,4 @@
-﻿using System;
-using DataModel;
+﻿using DataModel;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -26,7 +25,9 @@ namespace DataBase.Lib
 
         public void AddStudent(Student student)
         {
-            //TODO Реализовать метод
+            var database = _client.GetDatabase("test");
+            var collection = database.GetCollection<Student>("students");
+            collection.InsertOne(student);
         }
 
         public void UpdateStudent(Student student)
