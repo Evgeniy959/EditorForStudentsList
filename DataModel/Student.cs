@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json;
 using MongoDB.Bson;
 
 namespace DataModel
@@ -14,5 +15,10 @@ namespace DataModel
         public string Email { get; set; }
         public bool IsStudy { get; set; }
         public string Faculty { get; set; }
+
+        public override string ToString()
+        {
+            return JsonSerializer.Serialize(this, typeof(Student));
+        }
     }
 }
