@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="EditorForStudentsList" Height="450" Width="800">
     <Grid>
-        <ListView x:Name="ListOfStudents" d:DataContext="{d:SampleData Student |(in DataModel)}">
+        <ListView x:Name="ListOfStudents" d:DataContext="{d:SampleData Student |(in DataModel)}"
+                  MouseDoubleClick="ListOfStudents_OnMouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}">Фамилия</GridViewColumn>

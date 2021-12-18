@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 using DataModel;
 
 namespace EditorForStudentsList
@@ -16,6 +18,11 @@ namespace EditorForStudentsList
             _list = _db.GetAllStudents();
 
             ListOfStudents.ItemsSource = _list.Students;
+        }
+
+        private void ListOfStudents_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectedStudent = (sender as ListView)?.SelectedItem as Student;
         }
     }
 }
