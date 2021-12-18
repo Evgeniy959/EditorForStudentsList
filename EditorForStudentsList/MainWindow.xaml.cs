@@ -24,7 +24,7 @@ namespace EditorForStudentsList
         {
             var selectedStudent = (sender as ListView)?.SelectedItem as Student;
             
-            var editor = new Editor();
+            var editor = new Editor(selectedStudent);
             editor.Show();
         }
     }
