@@ -7,15 +7,20 @@
         mc:Ignorable="d"
         Title="Student" Height="450" Width="800">
     <Window.Resources>
+        <!-- Базовый стиль -->
         <Style x:Key="Style" TargetType="Control">
             <Setter Property="Margin" Value="2"/>
         </Style>
+        
+        <!-- Стиль для Label -->
         <Style x:Key="Style_Label" TargetType="Control"
                BasedOn="{StaticResource Style}">
             <Setter Property="Foreground" Value="DarkBlue"/>
             <Setter Property="FontSize" Value="25"/>
             <Setter Property="Width" Value="250"/>
         </Style>
+        
+        <!-- Стиль для полей редактирования -->
         <Style x:Key="Style_TextBox" TargetType="TextBox"
                BasedOn="{StaticResource Style}">
             <Setter Property="Foreground" Value="Black"/>
@@ -28,8 +33,28 @@
             <Setter Property="Height" Value="15"/>
             <Setter Property="Width" Value="15"/>
         </Style>
+        
+        <!-- Стили для кнопок -->
+        <Style x:Key="Style_Button" TargetType="Button" 
+               BasedOn="{StaticResource Style}">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="23"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="Style_Button_Cancel" TargetType="Button" 
+               BasedOn="{StaticResource Style_Button}">
+            <Setter Property="Background" Value="Red"/>
+        </Style>
+        <Style x:Key="Style_Button_Clear" TargetType="Button" 
+               BasedOn="{StaticResource Style_Button}">
+            <Setter Property="Background" Value="Yellow"/>
+        </Style>
+        <Style x:Key="Style_Button_Save" TargetType="Button" 
+               BasedOn="{StaticResource Style_Button}">
+            <Setter Property="Background" Value="Green"/>
+        </Style>
     </Window.Resources>
-    <StackPanel>
+    <StackPanel DataContext="">
         <StackPanel Orientation="Horizontal">
             <Label x:Name="Label_LastName" 
                    Content="Фамилия"
@@ -69,7 +94,8 @@
             <Label x:Name="Label_IsStudy" 
                    Content="Учится?"
                    Style="{StaticResource Style_Label}"/>
-            <CheckBox x:Name="IsStudy"/>
+            <CheckBox x:Name="IsStudy"
+                      Style="{StaticResource Style_CheckBox}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label x:Name="Label_Faculty" 
@@ -78,5 +104,21 @@
             <TextBox x:Name="Faculty"
                      Style="{StaticResource Style_TextBox}"/>
         </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="Button_Cancel"
+                    Content="Cancel"
+                    Click="Button_Cancel_OnClick"
+                    Style="{StaticResource Style_Button_Cancel}"/>
+            <Button x:Name="Button_Clear"
+                    Content="Clear"
+                    Click="Button_Clear_OnClick"
+                    Style="{StaticResource Style_Button_Clear}"/>
+            <Button x:Name="Button_Save"
+                    Content="Save"
+                    Click="Button_Save_OnClick"
+                    Style="{StaticResource Style_Button_Save}"/>
+        </StackPanel>
+        <Label x:Name="StatusBar"/>
     </StackPanel>
 </Window>

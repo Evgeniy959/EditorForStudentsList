@@ -35,10 +35,11 @@ namespace DataBase.Lib
             _collection.InsertOne(student);
         }
 
-        public void UpdateStudent(Student student)
+        public ReplaceOneResult UpdateStudent(Student student)
         {
             DbConnection();
-            _collection.ReplaceOne(Builders<Student>.Filter.Eq("Id", student.Id), student);
+            var result = _collection.ReplaceOne(Builders<Student>.Filter.Eq("Id", student.Id), student);
+            return result;
         }
     }
 }
