@@ -23,6 +23,9 @@ namespace EditorForStudentsList
         private void ListOfStudents_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var selectedStudent = (sender as ListView)?.SelectedItem as Student;
+            
+            var editor = new Editor();
+            editor.Show();
         }
     }
 }

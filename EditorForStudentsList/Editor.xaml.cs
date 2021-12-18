@@ -2,9 +2,9 @@
 
 namespace EditorForStudentsList
 {
-    public partial class EditorOfStudent : Window
+    public partial class Editor : Window
     {
-        public EditorOfStudent()
+        public Editor()
         {
             InitializeComponent();
         }
