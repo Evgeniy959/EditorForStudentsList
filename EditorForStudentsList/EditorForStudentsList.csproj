@@ -6,4 +6,9 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\DataBase.Lib\DataBase.Lib.csproj" />
+      <ProjectReference Include="..\DataModel\DataModel.csproj" />
+    </ItemGroup>
+
 </Project>
